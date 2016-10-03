@@ -1,0 +1,108 @@
+@charset "utf-8";
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100;
+    background-color: #dddddd;
+}
+
+
+/*---#文字関係のデフォ設定を解除,書体設定----------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, p, small {
+    border: 0;
+    font-style: normal;
+    font-weight: normal;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    vertical-align: baseline;
+    width: 100%;
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    text-align: center;
+}
+
+
+/*---#header-------------------------------------------------------*/
+
+header {
+    height: 12%;
+    text-align: center;
+    background-color: #147e7e;
+}
+
+header h1 {
+    padding: 0.5%;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+header p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/*---#main-------------------------------------------------------*/
+
+main {
+    margin: 6% 15%;
+    padding: 8%;
+    text-align: center;
+    background-color: #eeeeee;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+main input {
+    margin: 0 2%;
+    border: 0;
+    padding: 10px;
+    font-size: 1.3em;
+    font-family: Arial, sans-serif;
+    border: solid 2px #ccc;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    width: 150px;
+}
+
+main p {
+    margin-top: 8%;
+    font-size: 28px;
+}
+
+main select {
+	padding: 15px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 1px solid #999;
+	background: #eee;
+	background: -webkit-linear-gradient(top, #fff 0%,#efebe1 100%);
+	background: linear-gradient(to bottom, #fff 0%,#efebe1 100%);
+}
+
+
+/*---footer--------ß-----------------------------------------------*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    /*    padding: 0.5% 0;*/
+    text-align: center;
+    background-color: #147e7e;
+}
+
+footer hr {
+    margin: 0.5% 0 0 0;
+    border: none;
+    border-top: dashed 3px;
+    height: 4px;
+    color: #ffffff;
+}
