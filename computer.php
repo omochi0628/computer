@@ -1,11 +1,12 @@
 <?php
-if (isset($_GET['operator'])) {
-  //mb_convert_kana：全角半角変換'n':全角数字→半角数字
-$left = mb_convert_kana($_GET['left'], 'n', 'UTF-8');
-  $right = mb_convert_kana($_GET['right'], 'n', 'UTF-8');
 
-  if (is_numeric($left) == ture && is_numeric($right) == ture) {
-      switch ($_GET['operator']) {
+if (isset($_GET['operator'])) {
+    //mb_convert_kana：全角半角変換'n':全角数字→半角数字
+    $left = mb_convert_kana($_GET['left'], 'n', 'UTF-8');
+    $right = mb_convert_kana($_GET['right'], 'n', 'UTF-8');
+
+    if (is_numeric($left) == ture && is_numeric($right) == ture) {
+        switch ($_GET['operator']) {
       case '-':
           $ans = $left - $right;
           break;
@@ -22,12 +23,12 @@ $left = mb_convert_kana($_GET['left'], 'n', 'UTF-8');
           $ans = $left + $right;
           break;
   }
-  } else {
-      //数字以外の文字が入力された場合
+    } else {
+        //数字以外の文字が入力された場合
 $moji = '全角または半角の数字を入力してください。';
-  }
+    }
 } else {
-  //未入力
+    //未入力
   $ans = '計算結果なし';
 }
 ?>
