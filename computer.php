@@ -5,6 +5,7 @@ if (isset($_GET['operator'])) {
     $left = mb_convert_kana($_GET['left'], 'n', 'UTF-8');
     $right = mb_convert_kana($_GET['right'], 'n', 'UTF-8');
 
+    // 変数が数字または数値形式の文字列であるかを調べる
     if (is_numeric($left) == ture && is_numeric($right) == ture) {
         switch ($_GET['operator']) {
       case '-':
@@ -15,6 +16,7 @@ if (isset($_GET['operator'])) {
           break;
       case '/':
           $ans = $left / $right;
+          // $rightに0が入った場合(値はfalseになる):error表示
           if ($ans === false) {
               $ans = 'error';
           }
@@ -25,7 +27,7 @@ if (isset($_GET['operator'])) {
   }
     } else {
         //数字以外の文字が入力された場合
-$moji = '全角または半角の数字を入力してください。';
+        $moji = '全角または半角の数字を入力してください。';
     }
 } else {
     //未入力
@@ -64,7 +66,7 @@ $moji = '全角または半角の数字を入力してください。';
       <p>
           <?php echo '計算結果:'.$ans; ?>
       </p>
-      <!-- $_GET['left']とr$_GET['right]に数字以外の文字が入ってきた場合(エラー) -->
+      <!-- $_GET['left']と$_GET['right]に数字以外の文字が入ってきた場合(エラー) -->
       <?php endif; ?>
       <?php if (is_numeric($left) == flase && is_numeric($right) == false): ?>
       <p>
