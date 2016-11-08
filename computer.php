@@ -6,7 +6,7 @@ if (isset($_GET['operator'])) {
     $right = mb_convert_kana($_GET['right'], 'n', 'UTF-8');
 
     // 変数が数字または数値形式の文字列であるかを調べる
-    if (is_numeric($left) == ture && is_numeric($right) == ture) {
+    if (is_numeric($left) == true && is_numeric($right) == true) {
         switch ($_GET['operator']) {
       case '-':
           $ans = $left - $right;
